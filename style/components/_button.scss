@@ -55,7 +55,7 @@
 
         .button__label {
             font-size: 16px;
-            color: var(--color-m-dynamic-95         );
+            color: var(--color-m-dynamic-95);
         }
 
         .button__icon {
@@ -76,14 +76,14 @@
         &:hover {
             border: none;
             color: var(--color-m-dynamic-99);
-            background-color: var(--color-m-dynamic-80);
+            background-color: var(--color-m-dynamic-70);
         }
 
         &:active,
         &--active {
             border: none;
             color: var(--color-m-dynamic-99);
-            background-color: var(--color-m-dynamic-70);
+            background-color: var(--color-m-dynamic-60);
         }
 
         &:disabled,

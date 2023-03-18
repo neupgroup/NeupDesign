@@ -8,7 +8,7 @@
 @import url(variables.css);
 
 // Importing of buttons to be used in the site.
-@import "button";
+@forward "components/button";
 
 
 
