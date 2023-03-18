@@ -1,0 +1,256 @@
+@import url(https://neupgroup.com/assets/designing/guidelines/normalizer.min.css);
+@import url(colors.css);
+@import url(variables.css);
+.button {
+  height: 48px;
+  max-height: 44px;
+  min-width: 48px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 8px;
+}
+.button--solid {
+  border: none;
+  color: var(--color-m-dynamic-90);
+  background-color: var(--color-m-dynamic-50);
+  transition: all 600ms ease;
+}
+.button--solid:hover {
+  border: none;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-40);
+}
+.button--solid:active, .button--solid--active {
+  border: none;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-30);
+}
+.button--solid:disabled, .button--solid--disabled, .button--solid[aria-disabled=true] {
+  opacity: 0.3;
+  border: none;
+  cursor: not-allowed;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-50);
+}
+.button--solid:disabled:hover, .button--solid--disabled:hover, .button--solid[aria-disabled=true]:hover {
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-40);
+}
+.button--solid:disabled:active, .button--solid--disabled:active, .button--solid[aria-disabled=true]:active {
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-30);
+}
+.button--solid .button__label {
+  font-size: 16px;
+  color: var(--color-m-dynamic-95);
+}
+.button--solid .button__icon {
+  color: var(--color-m-dynamic-99);
+  width: 24px;
+  height: 24px;
+}
+.button--tint {
+  border: none;
+  color: var(--color-m-dynamic-1);
+  background-color: var(--color-m-dynamic-80);
+  transition: all 200ms ease;
+}
+.button--tint:hover {
+  border: none;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-80);
+}
+.button--tint:active, .button--tint--active {
+  border: none;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-70);
+}
+.button--tint:disabled, .button--tint--disabled, .button--tint[aria-disabled=true] {
+  border: none;
+  color: var(--color-m-dynamic-99);
+  background-color: var(--color-m-dynamic-90);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.button--tint .button__label {
+  font-size: 16px;
+  color: var(--color-m-dynamic-1);
+}
+.button--tint .button__icon {
+  width: 24px;
+  height: 24px;
+}
+.button--outline {
+  color: var(--color-m-dynamic-10);
+  border: 1px solid var(--color-m-dynamic-40);
+  background-color: var(--color-n-transparent);
+  transition: all 600ms ease;
+}
+.button--outline:hover {
+  color: var(--color-m-dynamic-10);
+  border: 1px solid var(--color-m-dynamic-30);
+  background-color: var(--color-m-dynamic-90);
+}
+.button--outline:active, .button--outline--active {
+  color: var(--color-m-dynamic-10);
+  border: 1px solid var(--color-m-dynamic-20);
+  background-color: var(--color-m-dynamic-80);
+}
+.button--outline:disabled, .button--outline--disabled, .button--outline[aria-disabled=true] {
+  color: var(--color-m-dynamic-10);
+  border: 1px solid var(--color-m-dynamic-40);
+  background-color: var(--color-n-transparent);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.button--outline .button__label {
+  font-size: 16px;
+  color: var(--color-m-dynamic-99);
+}
+.button--outline .button__icon {
+  width: 24px;
+  height: 24px;
+}
+.button--plain {
+  color: var(--color-m-dynamic-10);
+  border: none;
+  background-color: var(--color-n-transparent);
+  transition: all 600ms ease;
+}
+.button--plain:hover {
+  color: var(--color-m-dynamic-10);
+  border: none;
+  background-color: var(--color-m-dynamic-90);
+}
+.button--plain:active, .button--plain--active {
+  color: var(--color-m-dynamic-10);
+  border: none;
+  background-color: var(--color-m-dynamic-80);
+}
+.button--plain:disabled, .button--plain--disabled, .button--plain[aria-disabled=true] {
+  color: var(--color-m-dynamic-10);
+  border: none;
+  background-color: var(--color-n-transparent);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.button--plain .button__label {
+  font-size: 16px;
+  color: var(--color-m-dynamic-99);
+}
+.button--plain .button__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.content {
+  max-width: var(--body-content-max-width);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 64px;
+  max-height: 64px;
+  overflow: hidden;
+  padding: 0 var(--header-gap);
+  box-shadow: 0 4px 8px var(--color-m-dynamic-90);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: var(--body-content-max-width);
+  width: 100%;
+  -moz-column-gap: var(--header-gap);
+       column-gap: var(--header-gap);
+  align-items: center;
+  align-content: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__menu {
+  display: flex;
+  gap: var(--header-gap);
+  flex-direction: row;
+}
+
+.header__menu-item {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+.header__menu-item--active {
+  background-color: var(--color-m-dynamic-100);
+}
+.header__menu-item--inactive {
+  opacity: 0.5;
+}
+.header__menu-item--inactive:hover {
+  background-color: none;
+}
+.header__menu-item:hover {
+  background-color: var(--color-m-dynamic-100);
+}
+
+.header__login {
+  color: var(--color-m-dynamic-0);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+.header__login:hover {
+  background-color: #f2f2f2;
+}
+
+.clock {
+  background-color: var(--color-m-dynamic-95);
+  height: 150vh;
+}
+
+.clock {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.clock__time {
+  font-size: 72px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.clock__date {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,75 @@
+:root {
+    --color-m-dynamic--hue: 0;
+    --color-m-dynamic--saturation: 0%;
+    --color-m-dynamic-lightness: 50%;
+    --color-m-dynamic-transparent: transparent;
+
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-m-dynamic-0: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 0%);
+        --color-m-dynamic-1: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 1%);
+        --color-m-dynamic-2: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 2%);
+        --color-m-dynamic-3: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 3%);
+        --color-m-dynamic-4: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 4%);
+        --color-m-dynamic-5: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 5%);
+        --color-m-dynamic-10: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 10%);
+        --color-m-dynamic-15: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 15%);
+        --color-m-dynamic-20: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 20%);
+        --color-m-dynamic-25: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 25%);
+        --color-m-dynamic-30: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 30%);
+        --color-m-dynamic-35: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 35%);
+        --color-m-dynamic-40: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 40%);
+        --color-m-dynamic-45: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 45%);
+        --color-m-dynamic-50: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 50%);
+        --color-m-dynamic-55: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 55%);
+        --color-m-dynamic-60: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 60%);
+        --color-m-dynamic-65: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 65%);
+        --color-m-dynamic-70: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 70%);
+        --color-m-dynamic-75: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 75%);
+        --color-m-dynamic-80: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 80%);
+        --color-m-dynamic-85: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 85%);
+        --color-m-dynamic-90: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 90%);
+        --color-m-dynamic-95: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 95%);
+        --color-m-dynamic-96: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 96%);
+        --color-m-dynamic-97: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 97%);
+        --color-m-dynamic-98: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 98%);
+        --color-m-dynamic-99: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 99%);
+        --color-m-dynamic-100: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 100%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-m-dynamic-0: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 100%);
+        --color-m-dynamic-1: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 99%);
+        --color-m-dynamic-2: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 98%);
+        --color-m-dynamic-3: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 97%);
+        --color-m-dynamic-4: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 96%);
+        --color-m-dynamic-5: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 95%);
+        --color-m-dynamic-10: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 90%);
+        --color-m-dynamic-15: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 85%);
+        --color-m-dynamic-20: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 80%);
+        --color-m-dynamic-25: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 75%);
+        --color-m-dynamic-30: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 70%);
+        --color-m-dynamic-35: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 65%);
+        --color-m-dynamic-40: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 60%);
+        --color-m-dynamic-45: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 55%);
+        --color-m-dynamic-50: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 50%);
+        --color-m-dynamic-55: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 45%);
+        --color-m-dynamic-60: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 40%);
+        --color-m-dynamic-65: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 35%);
+        --color-m-dynamic-70: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 30%);
+        --color-m-dynamic-75: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 25%);
+        --color-m-dynamic-80: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 20%);
+        --color-m-dynamic-85: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 15%);
+        --color-m-dynamic-90: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 10%);
+        --color-m-dynamic-95: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 5%);
+        --color-m-dynamic-96: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 4%);
+        --color-m-dynamic-97: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 3%);
+        --color-m-dynamic-98: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 2%);
+        --color-m-dynamic-99: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 1%);
+        --color-m-dynamic-100: hsl(var(--color-m-dynamic--hue), var(--color-m-dynamic--saturation), 0%);
+    }
+}
