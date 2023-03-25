@@ -1,0 +1,23 @@
+// Importing of More SCSS to be used
+@use "../abstract/_index" as abstract;
+
+
+// The code for the main element
+img {
+    border-radius: abstract.$radius;
+}
+
+
+// Media Queries Start from here
+@media screen and (min-width: 1440px) {
+    img {
+        max-width: 1440px;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    img {
+        max-width: 100%;
+    }
+}   

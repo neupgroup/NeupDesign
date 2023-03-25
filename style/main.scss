@@ -1,0 +1,71 @@
+// Importing of all the required SCSS files
+@use "./abstract/_index" as abstract;
+@use "./base/_index" as base;
+@use "./component/_index" as component;
+@use "./layout/_index" as layout;
+@use "./page/_index" as page;
+@use "./theme/_index" as theme;
+@use "./utility/_index" as utility;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clock{
+    background-color: var(--color-m-dynamic-95);
+    height: 150vh
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Clock styles
+.clock {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock__title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.clock__time {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.clock__date {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../style/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+  function toggleOperator() {
+      const menuContainer = document.querySelector('.header__menu-container');
+      menuContainer.classList.toggle('menu-open');
+  }
+</script>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__aod">
+        <a type="button" onclick="toggleOperator()" class="header__toggle-container">
+          <img
+            src="https://icon-library.com/images/hamburger-menu-icon-transparent/hamburger-menu-icon-transparent-4.jpg"
+            class="header__toggle" id="header__toggle">
+        </a>
+        <a href="#" class="header__logo">NeupCard</a>
+      </div>
+      <nav class="header__menu-container" id="header__menu-container-1">
+        <a href="#" class="button button--plain button--plain--active">
+          <div class="button__label">Clock</div>
+        </a>
+        <a href="#" class="button button--plain">
+          <div class="button__label">Stopwatch</div>
+        </a>
+        <a href="#" class="button button--plain">
+          <div class="button__label">Timer</div>
+        </a>
+        <a href="#" class="button button--plain">
+          <div class="button__label">Alarm</div>
+        </a>
+      </nav>
+      <div class="header__menu-container" id="header__menu-container-2">
+        <a href="#" class="button button--solid">
+          <div class="button__label">Hello, Kishor!</div>
+        </a>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

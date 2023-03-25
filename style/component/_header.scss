@@ -1,0 +1,133 @@
+@use "../abstract/_index" as abstract;
+@use "../theme/_index" as theme;
+
+// Header section
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 64px;
+  max-height: 64px;
+  overflow: hidden;
+  padding: 0 abstract.$spacing;
+  box-shadow: 0 2px 4px theme.$color_m-dynamic-85;
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    height: auto;
+    max-height: none;
+    padding: abstract.$spacing;
+    box-shadow: none;
+
+    .header__menu-container {
+      display: none;
+    }
+
+    .header__toggle-container {
+      display: block;
+    }
+  }
+}
+
+// Header container
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  column-gap: abstract.$spacing;
+  align-items: center;
+  align-content: center;
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+// Header logo
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: theme.$color_m-dynamic-30;
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    margin-bottom: abstract.$spacing;
+  }
+}
+
+// Header menu container
+.header__menu-container {
+  display: flex;
+  gap: abstract.$spacing;
+  flex-direction: row;
+  align-items: center;
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: theme.$color_m-dynamic-95;
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+
+    &.menu-open {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Header toggle container
+.header__toggle-container {
+  // Responsive styles
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+// Header toggle
+.header__toggle {
+  width: 24px;
+  height: 24px;
+
+  // Responsive styles
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+// Header menu separator
+.header__menu-separator {
+  width: 100%;
+  height: 1px;
+  background-color: theme.$color_m-dynamic-75;
+  margin-top: abstract.$spacing;
+  margin-bottom: abstract.$spacing;
+}
+
+// Hello Kishor button
+.header__hello-button {
+  margin-left: auto;
+  margin-right: abstract.$spacing;
+}
+
+// Menu button styles
+.button--plain {
+  color: theme.$color_m-dynamic-50;
+  &:hover {
+    color: theme.$color_m-dynamic-30;
+  }
+}
+
+.button--plain--active {
+  color: theme.$color_m-dynamic-95;
+  background-color: theme.$color_m-dynamic-20;
+}
