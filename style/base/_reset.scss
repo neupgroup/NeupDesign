@@ -13,3 +13,7 @@ a{
 body{
     overflow-y: scroll;
 }
+
+main{
+    margin-top: calc(64px + 16px);
+}

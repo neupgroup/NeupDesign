@@ -1,0 +1,184 @@
+// Importing the variables and design foundation to the code.
+@use "../theme/_index" as theme;
+
+// Variables to be used only for the Solid menu-items
+$menu-item-solid-color: theme.$color_m-dynamic-99;
+$menu-item-solid-background-color: theme.$color_m-dynamic-50;
+$menu-item-solid-background-color--hover: theme.$color_m-dynamic-40;
+$menu-item-solid-background-color--active: theme.$color_m-dynamic-30;
+
+// Variables to be used only for the Tint menu-items
+$menu-item-tint-color: theme.$color_m-dynamic-1;
+$menu-item-tint-background-color: theme.$color_m-dynamic-80;
+$menu-item-tint-background-color--hover: theme.$color_m-dynamic-70;
+$menu-item-tint-background-color--active: theme.$color_m-dynamic-60;
+
+// Variable to be used only for the Outline menu-items
+$menu-item-outline-color: theme.$color_m-dynamic-1;
+$menu-item-outline-background-color: theme.$color_n-transparent;
+$menu-item-outline-background-color--hover: theme.$color_m-dynamic-95;
+$menu-item-outline-background-color--active: theme.$color_m-dynamic-90;
+$menu-item-outline-border-color: theme.$color_m-dynamic-40;
+$menu-item-outline-border-color--hover: theme.$color_m-dynamic-30;
+$menu-item-outline-border-color--active: theme.$color_m-dynamic-20;
+
+// Variables to be used onlt for the Plain menu-items
+$menu-item-plain-color: theme.$color_m-dynamic-1;
+$menu-item-plain-background-color: theme.$color_n-transparent;
+$menu-item-plain-background-color--hover: theme.$color_m-dynamic-95;
+$menu-item-plain-background-color--active: theme.$color_m-dynamic-90;
+
+// Variable for transtition on All menu-items
+$menu-item-transtition: all 400ms ease;
+
+// The main code for the menu-items starts here.
+.menu-item {
+    height: 48px;
+    max-height: 44px;
+    min-width: 48px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 24px; //rounded 24, edged 0, pill 4
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 8px;
+
+    &--solid {
+        border: none;
+        color: $menu-item-solid-color;
+        background-color: $menu-item-solid-background-color;
+        transition: $menu-item-transtition;
+
+        &:hover {
+            border: none;
+            color: $menu-item-solid-color;
+            background-color: $menu-item-solid-background-color--hover;
+        }
+
+        &:active,
+        &--active {
+            border: none;
+            color: $menu-item-solid-color;
+            background-color: $menu-item-solid-background-color--active;
+        }
+
+        &:disabled,
+        &--disabled,
+        &[aria-disabled="true"] {
+            opacity: 0.3;
+            border: none;
+            cursor: not-allowed;
+            color: $menu-item-solid-color;
+            background-color: $menu-item-solid-background-color;
+
+            &:hover {
+                color: inherit;
+                background-color: inherit;
+            }
+
+            &:active {
+                color: inherit;
+                background-color: inherit;
+            }
+
+        }
+
+    }
+
+    &--tint {
+        border: none;
+        color: $menu-item-tint-color;
+        background-color: $menu-item-tint-background-color;
+        transition: $menu-item-transtition;
+
+        &:hover {
+            border: none;
+            color: $menu-item-tint-color;
+            background-color: $menu-item-tint-background-color--hover;
+        }
+
+        &:active,
+        &--active {
+            border: none;
+            color: $menu-item-tint-color;
+            background-color: $menu-item-tint-background-color--active;
+        }
+
+        &:disabled,
+        &--disabled,
+        &[aria-disabled="true"] {
+            border: none;
+            color: $menu-item-tint-color;
+            background-color: $menu-item-tint-background-color;
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+    }
+
+    &--outline {
+        color: $menu-item-outline-color;
+        border: 1px solid $menu-item-outline-border-color;
+        background-color: $menu-item-outline-background-color;
+        transition: $menu-item-transtition;
+
+        &:hover {
+            color: $menu-item-outline-color;
+            border-color: $menu-item-outline-border-color--hover;
+            background-color: $menu-item-outline-background-color--hover;
+        }
+
+        &:active,
+        &--active {
+            color: $menu-item-outline-color;
+            border-color: $menu-item-outline-border-color--active;
+            background-color: $menu-item-outline-background-color--active;
+        }
+
+        &:disabled,
+        &--disabled,
+        &[aria-disabled="true"] {
+            color: $menu-item-outline-color;
+            border-color: $menu-item-outline-border-color;
+            background-color: $menu-item-outline-background-color;
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+    }
+
+    &--plain {
+        color: $menu-item-plain-color;
+        border: none;
+        background-color: $menu-item-plain-background-color;
+        transition: $menu-item-transtition;
+
+        &:hover {
+            color: $menu-item-plain-color;
+            border: none;
+            background-color: $menu-item-plain-background-color--hover;
+        }
+
+        &:active,
+        &--active {
+            color: $menu-item-plain-color;
+            border: none;
+            background-color: $menu-item-plain-background-color--active;
+        }
+
+        &:disabled,
+        &--disabled,
+        &[aria-disabled="true"] {
+            color: $menu-item-plain-color;
+            border: none;
+            background-color: $menu-item-plain-background-color;
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+    }
+
+}

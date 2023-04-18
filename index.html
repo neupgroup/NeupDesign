@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
@@ -9,24 +12,84 @@
 <body>
 
 
+    <!-- This is the main HTML that uses the JS for the functioning. -->
+    <header class="header">
+        <!-- Container adds the padding to the header and the header__container. -->
+        <div class="container header__container">
+            <!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+            <div class="header__aod">
+                <a href="#" class="header__logo">
+                    <div src="" class="logo__image">NeupGroup</div>
+                </a>
+                <div class="toggle header__toggle">
+                    <div class="toggle__bar toggle__bar-1"></div>
+                    <div class="toggle__bar toggle__bar-2"></div>
+                    <div class="toggle__bar toggle__bar-3"></div>
+                </div>
+            </div>
+            <nav class="header__menu-container">
+                <!-- Secondary links in the navigation bar. -->
+                <a href="#" class="button button--plain button--plain--active">
+                    <div class="button__label">Clock</div>
+                </a>
+                <a href="#" class="button button--plain">
+                    <div class="button__label">Stopwatch</div>
+                </a>
+                <a href="#" class="button button--plain">
+                    <div class="button__label">Timer</div>
+                </a>
+                <a href="#" class="button button--plain">
+                    <div class="button__label">Alarm</div>
+                </a>
+                <!-- Primary links in the navigation bar. -->
+                <a href="#" class="button button--solid">
+                    <div class="button__label">Hello, Kishor!</div>
+                </a>
+            </nav>
+        </div>
+        </div>
+    </header>
 
 
+    <!-- This script is required for the toggling function of the header. -->
+    <script>
+        const toggle = document.querySelector('.header__toggle.toggle');
+        const menuContainer = document.querySelector('.header > .header__container .header__menu-container');
+        toggle.addEventListener('click', () => {
+            // The class to add when toggle is clicked.
+            const menuContainerClass = "header__menu-container--open";
+            const toggleClass = "toggle--clicked";
+            // Toggle the following classes when the toggle icon is clicked.
+            menuContainer.classList.toggle(menuContainerClass);
+            toggle.classList.toggle(toggleClass);
+            // Check if the navigation bar is expanded.
+            if (menuContainer.classList.contains(menuContainerClass)) {
+                // Block the scroll of the user.
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Allow the user to scroll the page.
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 
-    <div class="container">
-        <img src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341400/EducationHub/photos/river-pollution.jpg"
-            alt="" class="">
-    </div>
+    <main>
 
+        <section style="height: 200vh;"></section>
 
+        <div class="container">
+            <img src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341400/EducationHub/photos/river-pollution.jpg"
+                alt="" class="">
+        </div>
 
-    <!-- <main>
         <section class="clock">
             <h2 class="clock__title">It's</h2>
             <p class="clock__time" id="clock__time">05:59:25 PM</p>
             <p class="clock__date" id="clock__date">March 06, 2023</p>
         </section>
-    </main> -->
+
+    </main>
 
 
 </body>

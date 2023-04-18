@@ -1,133 +1,122 @@
+// Importing of required SCSS
 @use "../abstract/_index" as abstract;
 @use "../theme/_index" as theme;
 
-// Header section
+body {
+  height: 100%;
+}
+
+
+// The universal SCSS
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 64px;
-  max-height: 64px;
-  overflow: hidden;
-  padding: 0 abstract.$spacing;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  min-height: 64px;
   box-shadow: 0 2px 4px theme.$color_m-dynamic-85;
-
-  // Responsive styles
-  @media (max-width: 1024px) {
-    height: auto;
-    max-height: none;
-    padding: abstract.$spacing;
-    box-shadow: none;
-
-    .header__menu-container {
-      display: none;
-    }
-
-    .header__toggle-container {
-      display: block;
-    }
-  }
 }
 
-// Header container
-.header__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1440px;
-  column-gap: abstract.$spacing;
-  align-items: center;
-  align-content: center;
-
-  // Responsive styles
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-// Header logo
-.header__logo {
+.header__aod>.header__logo {
   font-size: 24px;
   font-weight: bold;
   color: theme.$color_m-dynamic-30;
-
-  // Responsive styles
-  @media (max-width: 1024px) {
-    margin-bottom: abstract.$spacing;
-  }
 }
 
-// Header menu container
-.header__menu-container {
-  display: flex;
-  gap: abstract.$spacing;
-  flex-direction: row;
-  align-items: center;
 
-  // Responsive styles
-  @media (max-width: 1024px) {
+
+
+// The SCSS for header on mobile devices
+@media screen and (max-width: 1024px) {
+
+  .header {
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background-color: theme.$color_m-dynamic-95;
-    overflow-y: auto;
-    max-height: calc(100vh - 64px);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+    justify-content: start;
+    overflow: hidden;
+    background-color: theme.$color_m-dynamic-100;
+  }
 
-    &.menu-open {
-      transform: translateY(0);
+  .header__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__aod {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__menu-container {
+    height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    opacity: 0;
+    border-top: 0px solid black;
+    transition: all 1000ms ease-in-out;
+    gap: 8px;
+
+    .button {
+      min-height: 48px;
+      width: 100%;
+      display: flex;
+      border-radius: 16px;
+      flex-direction: row;
+      justify-content: start;
     }
   }
-}
 
-// Header toggle container
-.header__toggle-container {
-  // Responsive styles
-  @media (min-width: 1024px) {
-    display: none;
+  .header__menu-container.header__menu-container--open {
+    border-top: 1px solid black;
+    height: 100vh;
+    padding: 16px 0;
+    opacity: 1;
   }
+
+
 }
 
-// Header toggle
-.header__toggle {
-  width: 24px;
-  height: 24px;
 
-  // Responsive styles
-  @media (min-width: 1024px) {
-    display: none;
+
+// The SCSS for header on bigger devices 
+@media screen and (min-width: 1024px) {
+
+  .header {
+    overflow: hidden;
   }
-}
 
-// Header menu separator
-.header__menu-separator {
-  width: 100%;
-  height: 1px;
-  background-color: theme.$color_m-dynamic-75;
-  margin-top: abstract.$spacing;
-  margin-bottom: abstract.$spacing;
-}
-
-// Hello Kishor button
-.header__hello-button {
-  margin-left: auto;
-  margin-right: abstract.$spacing;
-}
-
-// Menu button styles
-.button--plain {
-  color: theme.$color_m-dynamic-50;
-  &:hover {
-    color: theme.$color_m-dynamic-30;
+  .header__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64px;
   }
-}
 
-.button--plain--active {
-  color: theme.$color_m-dynamic-95;
-  background-color: theme.$color_m-dynamic-20;
+  .header__aod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header__toggle {
+      display: none;
+    }
+
+  }
+
+  .header__menu-container {
+    display: flex;
+    gap: abstract.$spacing-less-2;
+    flex-direction: row;
+    align-items: center;
+  }
 }

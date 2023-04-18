@@ -1,0 +1,126 @@
+@use "../abstract/_index" as abstract;
+@use "../theme/_index" as theme;
+
+
+
+
+.toggle {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    transition-duration: 1s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+.toggle__bar,
+.toggle__bar:after,
+.toggle__bar:before {
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+    transition-duration: 0.5s;
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.toggle__bar {
+    top: 18px;
+    width: 36px;
+
+    &:before {
+        top: -12px;
+        width: 16px;
+        left: 20px;
+    }
+
+    &:after {
+        top: 12px;
+        width: 24px;
+        left: 12px;
+    }
+}
+
+
+
+.toggle__bar {
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+
+    &:after {
+        transition: transform 0.5s, top 0.5s 0.5s;
+    }
+
+    &:before {
+        transition: transform 0.5s, top 0.5s 0.5s;
+    }
+}
+
+.toggle.toggle--clicked>.toggle__bar {
+    transition-duration: 0.1s;
+    transition-delay: 0.5s;
+    background: transparent;
+    left: 0;
+    width: 36px;
+}
+
+.toggle.toggle--clicked>.toggle__bar:before {
+    transition: top 0.5s, transform 0.5s 0.5s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+    left: 0;
+    width: 36px;
+}
+
+.toggle.toggle--clicked>.toggle__bar:after {
+    transition: top 0.4s, transform 0.5s 0.5s;
+    top: 0px;
+    transform: rotateZ(45deg);
+    left: 0;
+    width: 36px;
+}
+
+
+
+// .toggle,
+// .toggle__bar {
+//     display: inline-block;
+//     transition: all .4s;
+//     box-sizing: border-box;
+// }
+
+// .toggle {
+// 	position: relative;
+// 	width: 36px;
+// 	height: 24px;
+// }
+
+// .toggle__bar {
+// 	position: absolute;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 4px;
+// 	background-color: theme.$color_m-dynamic-30;
+// 	border-radius: 4px;
+// }
+
+// .toggle__bar-1{
+//     top: 0;
+// }
+
+// .toggle__bar-3{
+//     bottom: 0;
+// }
+
+// .toggle.toggle--clicked > .toggle__bar-1 {
+// 	-webkit-transform: translateY (18px) rotate (-45deg);
+// 	transform: translateY(18px) rotate(-45deg);
+// }
+
+// .toggle.toggle--clicked .toggle__bar-3 {
+// 	-webkit-transform: translateY(-18px) rotate(45deg);
+// 	transform: translateY(-18px) rotate(45deg);
+// }
