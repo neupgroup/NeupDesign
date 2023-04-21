@@ -16,12 +16,15 @@ body {
   height: auto;
   min-height: 64px;
   box-shadow: 0 2px 4px theme.$color_m-dynamic-85;
+  background-color: theme.$color_m-dynamic-100;
 }
 
-.header__aod>.header__logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: theme.$color_m-dynamic-30;
+.header__aod {
+  .header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: theme.$color_m-dynamic-30;
+  }
 }
 
 
@@ -29,13 +32,11 @@ body {
 
 // The SCSS for header on mobile devices
 @media screen and (max-width: 1024px) {
-
   .header {
     display: flex;
     flex-direction: column;
     justify-content: start;
     overflow: hidden;
-    background-color: theme.$color_m-dynamic-100;
   }
 
   .header__container {
@@ -54,13 +55,13 @@ body {
   }
 
   .header__menu-container {
-    height: 0px;
+    height: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     opacity: 0;
-    border-top: 0px solid black;
+    border-top: 0px solid theme.$color_m-dynamic-50;
     transition: all 1000ms ease-in-out;
     gap: 8px;
 
@@ -75,13 +76,11 @@ body {
   }
 
   .header__menu-container.header__menu-container--open {
-    border-top: 1px solid black;
+    border-top: 2px solid theme.$color_m-dynamic-50;
     height: 100vh;
     padding: 16px 0;
     opacity: 1;
   }
-
-
 }
 
 
@@ -98,6 +97,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 64px;
   }
 
@@ -107,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    .header__toggle {
+    .header__toggle-container {
       display: none;
     }
 
@@ -118,5 +118,53 @@ body {
     gap: abstract.$spacing-less-2;
     flex-direction: row;
     align-items: center;
+  }
+}
+
+
+// The SCSS for the toggle button.
+.header__toggle-container {
+
+  .header__toggle-button>.toggle-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    .toggle__bar {
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      background-color: theme.$color_m-dynamic-35;
+      border-radius: 8px;
+      transition: transform 300ms ease-in-out;
+
+      &:first-child {
+        top: 6px;
+      }
+
+      &:last-child {
+        bottom: 6px;
+      }
+    }
+  }
+
+  .header__toggle-button>.toggle-icon--clicked {
+
+    .toggle__bar {
+
+      &:first-child {
+        top: calc(50% - 1.5px);
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        bottom: calc(50% - 1.5px);
+        transform: rotate(-45deg);
+      }
+    }
   }
 }

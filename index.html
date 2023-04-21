@@ -12,6 +12,7 @@
 <body>
 
 
+
     <!-- This is the main HTML that uses the JS for the functioning. -->
     <header class="header">
         <!-- Container adds the padding to the header and the header__container. -->
@@ -21,10 +22,14 @@
                 <a href="#" class="header__logo">
                     <div src="" class="logo__image">NeupGroup</div>
                 </a>
-                <div class="toggle header__toggle">
-                    <div class="toggle__bar toggle__bar-1"></div>
-                    <div class="toggle__bar toggle__bar-2"></div>
-                    <div class="toggle__bar toggle__bar-3"></div>
+                <!-- Only for the small width devices. Used with JavaScript support. -->
+                <div class="header__toggle-container">
+                    <a class="button button--plain header__toggle-button">
+                        <div class="toggle toggle-icon button__icon header__toggle-icon">
+                            <div class="toggle__bar"></div>
+                            <div class="toggle__bar"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <nav class="header__menu-container">
@@ -47,34 +52,50 @@
                 </a>
             </nav>
         </div>
-        </div>
     </header>
 
 
-    <!-- This script is required for the toggling function of the header. -->
-    <script>
-        const toggle = document.querySelector('.header__toggle.toggle');
-        const menuContainer = document.querySelector('.header > .header__container .header__menu-container');
-        toggle.addEventListener('click', () => {
-            // The class to add when toggle is clicked.
-            const menuContainerClass = "header__menu-container--open";
-            const toggleClass = "toggle--clicked";
-            // Toggle the following classes when the toggle icon is clicked.
-            menuContainer.classList.toggle(menuContainerClass);
-            toggle.classList.toggle(toggleClass);
-            // Check if the navigation bar is expanded.
-            if (menuContainer.classList.contains(menuContainerClass)) {
-                // Block the scroll of the user.
-                document.body.style.overflow = 'hidden';
-            } else {
-                // Allow the user to scroll the page.
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
 
 
     <main>
+
+
+        <h1>Welcome to my HTML page</h1>
+        <p>This is a paragraph of text.</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <br>
+        <a href="https://www.example.com">Click me!</a>
+        <hr>
+        <p>Another paragraph of text.</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>28</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>34</td>
+                <td>Female</td>
+            </tr>
+        </table>
+
+
 
         <section style="height: 200vh;"></section>
 
@@ -89,7 +110,26 @@
             <p class="clock__date" id="clock__date">March 06, 2023</p>
         </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
+
+
+
+    <script src="./javascript/header.js"></script>
 
 
 </body>

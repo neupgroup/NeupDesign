@@ -161,9 +161,10 @@ body {
   height: auto;
   min-height: 64px;
   box-shadow: 0 2px 4px hsl(200, 50%, 85%);
+  background-color: hsl(200, 50%, 100%);
 }
 
-.header__aod > .header__logo {
+.header__aod .header__logo {
   font-size: 24px;
   font-weight: bold;
   color: hsl(200, 50%, 30%);
@@ -175,7 +176,6 @@ body {
     flex-direction: column;
     justify-content: start;
     overflow: hidden;
-    background-color: hsl(200, 50%, 100%);
   }
   .header__container {
     width: 100%;
@@ -191,13 +191,13 @@ body {
     align-items: center;
   }
   .header__menu-container {
-    height: 0px;
+    height: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     opacity: 0;
-    border-top: 0px solid black;
+    border-top: 0px solid hsl(200, 50%, 50%);
     transition: all 1000ms ease-in-out;
     gap: 8px;
   }
@@ -210,7 +210,7 @@ body {
     justify-content: start;
   }
   .header__menu-container.header__menu-container--open {
-    border-top: 1px solid black;
+    border-top: 2px solid hsl(200, 50%, 50%);
     height: 100vh;
     padding: 16px 0;
     opacity: 1;
@@ -225,6 +225,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 64px;
   }
   .header__aod {
@@ -233,7 +234,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .header__aod .header__toggle {
+  .header__aod .header__toggle-container {
     display: none;
   }
   .header__menu-container {
@@ -243,6 +244,38 @@ body {
     align-items: center;
   }
 }
+.header__toggle-container .header__toggle-button > .toggle-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.header__toggle-container .header__toggle-button > .toggle-icon .toggle__bar {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: hsl(200, 50%, 35%);
+  border-radius: 8px;
+  transition: transform 300ms ease-in-out;
+}
+.header__toggle-container .header__toggle-button > .toggle-icon .toggle__bar:first-child {
+  top: 6px;
+}
+.header__toggle-container .header__toggle-button > .toggle-icon .toggle__bar:last-child {
+  bottom: 6px;
+}
+.header__toggle-container .header__toggle-button > .toggle-icon--clicked .toggle__bar:first-child {
+  top: calc(50% - 1.5px);
+  transform: rotate(45deg);
+}
+.header__toggle-container .header__toggle-button > .toggle-icon--clicked .toggle__bar:last-child {
+  bottom: calc(50% - 1.5px);
+  transform: rotate(-45deg);
+}
+
 h1,
 h2,
 h3 {
@@ -266,77 +299,6 @@ img {
     max-width: 100%;
   }
 }
-.toggle {
-  width: 36px;
-  height: 36px;
-  position: relative;
-  transition-duration: 1s;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.toggle__bar,
-.toggle__bar:after,
-.toggle__bar:before {
-  height: 4px;
-  border-radius: 2px;
-  background-color: black;
-  transition-duration: 0.5s;
-  content: "";
-  position: absolute;
-  left: 0;
-}
-
-.toggle__bar {
-  top: 18px;
-  width: 36px;
-}
-.toggle__bar:before {
-  top: -12px;
-  width: 16px;
-  left: 20px;
-}
-.toggle__bar:after {
-  top: 12px;
-  width: 24px;
-  left: 12px;
-}
-
-.toggle__bar {
-  transition-duration: 0.5s;
-  transition-delay: 0.5s;
-}
-.toggle__bar:after {
-  transition: transform 0.5s, top 0.5s 0.5s;
-}
-.toggle__bar:before {
-  transition: transform 0.5s, top 0.5s 0.5s;
-}
-
-.toggle.toggle--clicked > .toggle__bar {
-  transition-duration: 0.1s;
-  transition-delay: 0.5s;
-  background: transparent;
-  left: 0;
-  width: 36px;
-}
-
-.toggle.toggle--clicked > .toggle__bar:before {
-  transition: top 0.5s, transform 0.5s 0.5s;
-  top: 0px;
-  transform: rotateZ(-45deg);
-  left: 0;
-  width: 36px;
-}
-
-.toggle.toggle--clicked > .toggle__bar:after {
-  transition: top 0.4s, transform 0.5s 0.5s;
-  top: 0px;
-  transform: rotateZ(45deg);
-  left: 0;
-  width: 36px;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 16px;

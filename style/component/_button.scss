@@ -25,8 +25,10 @@ $button-outline-border-color--active: theme.$color_m-dynamic-20;
 // Variables to be used onlt for the Plain Buttons
 $button-plain-color: theme.$color_m-dynamic-1;
 $button-plain-background-color: theme.$color_n-transparent;
+
 $button-plain-background-color--hover: theme.$color_m-dynamic-95;
 $button-plain-background-color--active: theme.$color_m-dynamic-90;
+
 
 // Variable for transtition on All Buttons
 $button-transtition: all 400ms ease;
