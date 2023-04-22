@@ -1,6 +1,5 @@
 // Importing of required SCSS
-@use "../abstract/_index" as abstract;
-@use "../theme/_index" as theme;
+@use "../base/_index" as base;
 
 body {
   height: 100%;
@@ -8,44 +7,42 @@ body {
 
 
 // The universal SCSS
-.header {
+.topnav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: auto;
   min-height: 64px;
-  box-shadow: 0 2px 4px theme.$color_m-dynamic-85;
-  background-color: theme.$color_m-dynamic-100;
+  box-shadow: 0 2px 4px base.$color_m-dynamic-85;
+  background-color: base.$color_m-dynamic-100;
 }
 
-.header__aod {
-  .header__logo {
+.topnav__aod {
+  .topnav__logo {
     font-size: 24px;
     font-weight: bold;
-    color: theme.$color_m-dynamic-30;
+    color: base.$color_m-dynamic-30;
   }
 }
 
 
-
-
-// The SCSS for header on mobile devices
+// The SCSS for topnav on mobile devices
 @media screen and (max-width: 1024px) {
-  .header {
+  .topnav {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     overflow: hidden;
   }
 
-  .header__container {
+  .topnav__container {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .header__aod {
+  .topnav__aod {
     width: 100%;
     height: 64px;
     display: flex;
@@ -54,14 +51,14 @@ body {
     align-items: center;
   }
 
-  .header__menu-container {
+  .topnav__menu-container {
     height: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     opacity: 0;
-    border-top: 0px solid theme.$color_m-dynamic-50;
+    border-top: 0px solid base.$color_m-dynamic-50;
     transition: all 1000ms ease-in-out;
     gap: 8px;
 
@@ -71,12 +68,12 @@ body {
       display: flex;
       border-radius: 16px;
       flex-direction: row;
-      justify-content: start;
+      justify-content: flex-start;
     }
   }
 
-  .header__menu-container.header__menu-container--open {
-    border-top: 2px solid theme.$color_m-dynamic-50;
+  .topnav__menu-container.topnav__menu-container--open {
+    border-top: 2px solid base.$color_m-dynamic-50;
     height: 100vh;
     padding: 16px 0;
     opacity: 1;
@@ -85,14 +82,13 @@ body {
 
 
 
-// The SCSS for header on bigger devices 
+// The SCSS for topnav on bigger devices 
 @media screen and (min-width: 1024px) {
-
-  .header {
+  .topnav {
     overflow: hidden;
   }
 
-  .header__container {
+  .topnav__container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -101,21 +97,20 @@ body {
     height: 64px;
   }
 
-  .header__aod {
+  .topnav__aod {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .header__toggle-container {
+    .topnav__toggle-container {
       display: none;
     }
-
   }
 
-  .header__menu-container {
+  .topnav__menu-container {
     display: flex;
-    gap: abstract.$spacing-less-2;
+    gap: base.$spacing-less-2;
     flex-direction: row;
     align-items: center;
   }
@@ -123,9 +118,8 @@ body {
 
 
 // The SCSS for the toggle button.
-.header__toggle-container {
-
-  .header__toggle-button>.toggle-icon {
+.topnav__toggle-container {
+  .topnav__toggle-button>.toggle-icon {
     position: relative;
     display: flex;
     justify-content: center;
@@ -138,7 +132,7 @@ body {
       position: absolute;
       width: 24px;
       height: 3px;
-      background-color: theme.$color_m-dynamic-35;
+      background-color: base.$color_m-dynamic-35;
       border-radius: 8px;
       transition: transform 300ms ease-in-out;
 
@@ -152,7 +146,7 @@ body {
     }
   }
 
-  .header__toggle-button>.toggle-icon--clicked {
+  .topnav__toggle-button>.toggle-icon--clicked {
 
     .toggle__bar {
 
@@ -168,3 +162,9 @@ body {
     }
   }
 }
+
+
+
+
+
+.bottomnav {}

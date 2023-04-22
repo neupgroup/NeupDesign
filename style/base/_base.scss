@@ -1,3 +1,49 @@
+// Reset the theme for the Design System
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+main {
+	margin-top: calc(64px + 16px);
+}
+
+
+// Variable related to Spacing, Radius
+$spacing: 16px;
+$spacing-less-1: 8px;
+$spacing-less-2: 4px;
+$spacing-less-3: 2px;
+$spacing-more-1: 24px;
+$spacing-more-2: 32px;
+$spacing-more-3: 48px;
+$spacing-more-4: 64px;
+$spacing-more-5: 128px;
+$spacing-more-6: 256px;
+$radius: 16px;
+$radius-less-1: 8px;
+$radius-less-2: 4px;
+$radius-less-3: 2px;
+$radius-more-1: 24px;
+$radius-more-2: 32px;
+$radius-more-3: 48px;
+$radius-more-4: 64px;
+$radius-more-5: 128px;
+$radius-more-6: 256px;
+
+
+// Color Variable to be used in design system.
 $color_m-dynamic--hue: 200;
 $color_m-dynamic--saturation: 50%;
 $color_m-dynamic-lightness: 50%;
@@ -30,21 +76,46 @@ $color_m-dynamic-97: hsl($color_m-dynamic--hue, $color_m-dynamic--saturation, 97
 $color_m-dynamic-98: hsl($color_m-dynamic--hue, $color_m-dynamic--saturation, 98%);
 $color_m-dynamic-99: hsl($color_m-dynamic--hue, $color_m-dynamic--saturation, 99%);
 $color_m-dynamic-100: hsl($color_m-dynamic--hue, $color_m-dynamic--saturation, 100%);
-
+$color_n-transparent: transparent;
 $color_s-pass--hue: 0;
 $color_s-pass--saturation: 0%;
 $color_s-pass-lightness: 50%;
-
 $color_s-warn--hue: 0;
 $color_s-warn--saturation: 0%;
 $color_s-warn-lightness: 50%;
-
 $color_s-fail--hue: 0;
 $color_s-fail--saturation: 0%;
 $color_s-fail-lightness: 50%;
-
 $color_s-info--hue: 0;
 $color_s-info--saturation: 0%;
 $color_s-info-lightness: 50%;
 
-$color_n-transparent: transparent;
+
+
+// Typography to be used in the Design System
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+// Basic things ike Selection, Target
+
+::selection {
+	background-color: $color_m-dynamic-15;
+	color: $color_m-dynamic-95;
+}
+
+:target {
+	border: 2px solid $color_m-dynamic-100;
+	padding: 2px;
+}
+
+
+
+
+// Breakpoints
+@media screen and (min-width: 1440px) {}
+@media screen and (max-width: 1440px) {
+	@media screen and (max-width: 320px) {}
+	@media screen and (max-width: 768px) {}
+	@media screen and (max-width: 1024px) {}
+	@media screen and (max-width: 1440px) {}
+}

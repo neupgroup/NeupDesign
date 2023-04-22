@@ -1,33 +1,32 @@
 // Importing the variables and design foundation to the code.
-@use "../theme/_index" as theme;
+@use "../base/_index" as base;
 
 // Variables to be used only for the Solid Buttons
-$button-solid-color: theme.$color_m-dynamic-99;
-$button-solid-background-color: theme.$color_m-dynamic-50;
-$button-solid-background-color--hover: theme.$color_m-dynamic-40;
-$button-solid-background-color--active: theme.$color_m-dynamic-30;
+$button-solid-color: base.$color_m-dynamic-99;
+$button-solid-background-color: base.$color_m-dynamic-50;
+$button-solid-background-color--hover: base.$color_m-dynamic-40;
+$button-solid-background-color--active: base.$color_m-dynamic-30;
 
 // Variables to be used only for the Tint Buttons
-$button-tint-color: theme.$color_m-dynamic-1;
-$button-tint-background-color: theme.$color_m-dynamic-80;
-$button-tint-background-color--hover: theme.$color_m-dynamic-70;
-$button-tint-background-color--active: theme.$color_m-dynamic-60;
+$button-tint-color: base.$color_m-dynamic-1;
+$button-tint-background-color: base.$color_m-dynamic-80;
+$button-tint-background-color--hover: base.$color_m-dynamic-70;
+$button-tint-background-color--active: base.$color_m-dynamic-60;
 
 // Variable to be used only for the Outline Buttons
-$button-outline-color: theme.$color_m-dynamic-1;
-$button-outline-background-color: theme.$color_n-transparent;
-$button-outline-background-color--hover: theme.$color_m-dynamic-95;
-$button-outline-background-color--active: theme.$color_m-dynamic-90;
-$button-outline-border-color: theme.$color_m-dynamic-40;
-$button-outline-border-color--hover: theme.$color_m-dynamic-30;
-$button-outline-border-color--active: theme.$color_m-dynamic-20;
+$button-outline-color: base.$color_m-dynamic-1;
+$button-outline-background-color: base.$color_n-transparent;
+$button-outline-background-color--hover: base.$color_m-dynamic-95;
+$button-outline-background-color--active: base.$color_m-dynamic-90;
+$button-outline-border-color: base.$color_m-dynamic-40;
+$button-outline-border-color--hover: base.$color_m-dynamic-30;
+$button-outline-border-color--active: base.$color_m-dynamic-20;
 
 // Variables to be used onlt for the Plain Buttons
-$button-plain-color: theme.$color_m-dynamic-1;
-$button-plain-background-color: theme.$color_n-transparent;
-
-$button-plain-background-color--hover: theme.$color_m-dynamic-95;
-$button-plain-background-color--active: theme.$color_m-dynamic-90;
+$button-plain-color: base.$color_m-dynamic-1;
+$button-plain-background-color: base.$color_n-transparent;
+$button-plain-background-color--hover: base.$color_m-dynamic-95;
+$button-plain-background-color--active: base.$color_m-dynamic-90;
 
 
 // Variable for transtition on All Buttons

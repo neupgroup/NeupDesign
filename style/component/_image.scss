@@ -1,23 +1,30 @@
-// Importing of dependencies SCSS to be used
-@use "../abstract/_index" as abstract;
+// Guidelines for the image elements:
+//     > The image should be placed inside the container class.
+//     > For the home page and other page like so, consider using SVG.
+//     > .
 
 
-// The code for the main element
+// Importing of dependencies SCSS to be used.
+@use "../base/_index" as base;
+
+
+// The code for the main element.
 img {
-    border-radius: abstract.$radius;
+    border-radius: base.$radius;
 }
 
 
-// Media Queries Start from here
-@media screen and (min-width: 1440px) {
-    img {
-        max-width: 1440px;
-        display: flex;
-    }
-}
-
+// The code for smaller screens.
 @media screen and (max-width: 1440px) {
     img {
-        max-width: 100%;
+        width: 100%;
     }
-}   
+}
+
+
+// The code for larger screens.
+@media screen and (min-width: 1440px) {
+    img {
+        width: 100%
+    }
+}

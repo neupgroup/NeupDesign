@@ -1,23 +1,23 @@
 <!-- This is the main HTML that uses the JS for the functioning. -->
-<header class="header">
-    <!-- Container adds the padding to the header and the header__container. -->
-    <div class="container header__container">
-        <!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
-        <div class="header__aod">
-            <a href="#" class="header__logo">
+<header class="topnav">
+    <!-- Container adds the padding to the topnav and the topnav__container. -->
+    <div class="container topnav__container">
+        <!-- Class "topnav__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+        <div class="topnav__aod">
+            <a href="#" class="topnav__logo">
                 <div src="" class="logo__image">NeupGroup</div>
             </a>
             <!-- Only for the small width devices. Used with JavaScript support. -->
-            <div class="header__toggle-container">
-                <a class="button button--plain header__toggle-button">
-                    <div class="toggle toggle-icon button__icon header__toggle-icon">
+            <div class="topnav__toggle-container">
+                <a class="button button--plain topnav__toggle-button">
+                    <div class="toggle toggle-icon button__icon topnav__toggle-icon">
                         <div class="toggle__bar"></div>
                         <div class="toggle__bar"></div>
                     </div>
                 </a>
             </div>
         </div>
-        <nav class="header__menu-container">
+        <nav class="topnav__menu-container">
             <!-- Secondary links in the navigation bar. -->
             <a href="#" class="button button--plain button--plain--active">
                 <div class="button__label">Clock</div>
@@ -42,5 +42,5 @@
 
 
 
-<!-- This script is required for the toggling function of the header. -->
-<script src="../javascript/header.js"></script>
+<!-- This script is required for the toggling function of the topnav. -->
+<script src="../javascript/navigation.js"></script>

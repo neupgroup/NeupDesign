@@ -10,29 +10,26 @@
 </head>
 
 <body>
-
-
-
     <!-- This is the main HTML that uses the JS for the functioning. -->
-    <header class="header">
-        <!-- Container adds the padding to the header and the header__container. -->
-        <div class="container header__container">
-            <!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
-            <div class="header__aod">
-                <a href="#" class="header__logo">
+    <topnav class="topnav">
+        <!-- Container adds the padding to the topnav and the topnav__container. -->
+        <div class="container topnav__container">
+            <!-- Class "topnav__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+            <div class="topnav__aod">
+                <a href="#" class="topnav__logo">
                     <div src="" class="logo__image">NeupGroup</div>
                 </a>
                 <!-- Only for the small width devices. Used with JavaScript support. -->
-                <div class="header__toggle-container">
-                    <a class="button button--plain header__toggle-button">
-                        <div class="toggle toggle-icon button__icon header__toggle-icon">
+                <div class="topnav__toggle-container">
+                    <a class="button button--plain topnav__toggle-button">
+                        <div class="toggle toggle-icon button__icon topnav__toggle-icon">
                             <div class="toggle__bar"></div>
                             <div class="toggle__bar"></div>
                         </div>
                     </a>
                 </div>
             </div>
-            <nav class="header__menu-container">
+            <nav class="topnav__menu-container">
                 <!-- Secondary links in the navigation bar. -->
                 <a href="#" class="button button--plain button--plain--active">
                     <div class="button__label">Clock</div>
@@ -45,6 +42,7 @@
                 </a>
                 <a href="#" class="button button--plain">
                     <div class="button__label">Alarm</div>
+                    <span class="badge">2</span>
                 </a>
                 <!-- Primary links in the navigation bar. -->
                 <a href="#" class="button button--solid">
@@ -52,85 +50,27 @@
                 </a>
             </nav>
         </div>
-    </header>
-
-
-
+    </topnav>
 
     <main>
 
-
-        <h1>Welcome to my HTML page</h1>
-        <p>This is a paragraph of text.</p>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ul>
-        <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ol>
-        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-        <br>
-        <a href="https://www.example.com">Click me!</a>
-        <hr>
-        <p>Another paragraph of text.</p>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-            </tr>
-            <tr>
-                <td>John</td>
-                <td>28</td>
-                <td>Male</td>
-            </tr>
-            <tr>
-                <td>Jane</td>
-                <td>34</td>
-                <td>Female</td>
-            </tr>
-        </table>
-
-
-
-        <section style="height: 200vh;"></section>
-
-        <div class="container">
-            <img src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341400/EducationHub/photos/river-pollution.jpg"
-                alt="" class="">
-        </div>
-
-        <section class="clock">
-            <h2 class="clock__title">It's</h2>
-            <p class="clock__time" id="clock__time">05:59:25 PM</p>
-            <p class="clock__date" id="clock__date">March 06, 2023</p>
+        <section class="section section-hero">
+            <div class="container hero-container">
+                <div class="hero__content">
+                    <h1>This is a hero section</h1>
+                    <p>This is the hero section content.</p>
+                    <a href="#" class="button button--plain">Button</a>
+                    <a href="#" class="button button--solid">Button</a>
+                </div>
+                <div class="hero__image">
+                    <img src="https://example.com/image.jpg" alt="Hero image" />
+                </div>
+            </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </main>
 
-
-
-    <script src="./javascript/header.js"></script>
-
+    <script src="./javascript/navigation.js"></script>
 
 </body>
 

@@ -1,11 +1,12 @@
-// Importing of all the required SCSS files
-@use "./abstract/_index" as abstract;
+// Importing of all the required SCSS files.
 @use "./base/_index" as base;
 @use "./component/_index" as component;
-@use "./layout/_index" as layout;
-@use "./page/_index" as page;
-@use "./theme/_index" as theme;
-@use "./utility/_index" as utility;
+@use "./section/_index" as section;
 
-// The file where the real SCSS based on developer preferences is compiled.
-@use "../style/_main/_index" as *;
+
+// Import the code of the developer.
+@use "./custom/_index" as *;
+
+
+
+
