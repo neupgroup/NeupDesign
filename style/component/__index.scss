@@ -3,11 +3,13 @@
 
 // Independent image 
 @forward "text";
-@forward "heading";
 
 // Could require image (icon) and text (text)
 @forward "button";
 @forward "badge";
+
+// Requires nothing. (Independent)
+@forward "divider";
 
 // Could require image (logo) and text (text and heading)
 @forward "navigation";

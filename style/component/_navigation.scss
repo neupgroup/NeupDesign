@@ -12,6 +12,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
   height: auto;
   min-height: 64px;
   box-shadow: 0 2px 4px base.$color_m-dynamic-85;
@@ -59,7 +60,7 @@ body {
     align-items: flex-start;
     opacity: 0;
     border-top: 0px solid base.$color_m-dynamic-50;
-    transition: all 1000ms ease-in-out;
+    transition: all 1400ms ease;
     gap: 8px;
 
     .button {
@@ -134,7 +135,7 @@ body {
       height: 3px;
       background-color: base.$color_m-dynamic-35;
       border-radius: 8px;
-      transition: transform 300ms ease-in-out;
+      transition: transform 300ms ease;
 
       &:first-child {
         top: 6px;
@@ -163,8 +164,33 @@ body {
   }
 }
 
+// Bottom Navigation bar SCSS. No appearance on Bigger Screens.
+.bottomnav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: auto;
+  min-height: 96px;
+  box-shadow: 0 -2px 4px base.$color_m-dynamic-85;
+  background-color: base.$color_m-dynamic-100;
 
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
 
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-
-.bottomnav {}
+    .buttomnav__container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: flex-start;
+    }
+  }
+}
