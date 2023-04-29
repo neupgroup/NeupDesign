@@ -156,6 +156,81 @@ h3 {
     font-size: 28px;
   }
 }
+.clients-container {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+.clients-container .client {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 4px;
+}
+.clients-container .client .client__logo {
+  height: 96px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 320px) {
+  .clients-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 320.001px) and (max-width: 768px) {
+  .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768.001px) {
+  .clients-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.member-container {
+  margin-top: 24px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+.member-container .member > .member__image > img {
+  border-radius: 8px;
+}
+.member-container .member.member__content > .member__name {
+  font-family: Poppins;
+  font-weight: bold;
+}
+@media screen and (min-width: 0) and (max-width: 320px) {
+  .member-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 320.001px) and (max-width: 768px) {
+  .member-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768.001) and (max-width: 1024px) {
+  .member-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024.001) and (max-width: 1440px) {
+  .member-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .member-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .button {
   height: 48px;
   max-height: 44px;
@@ -293,6 +368,31 @@ h3 {
   border-radius: 50%;
 }
 
+.cta-container {
+  display: flex;
+  flex-direction: row;
+}
+.cta-container .cta__image {
+  flex: 3;
+}
+.cta-container .cta__content {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta-container .cta__content .cta__description {
+  margin-top: 8px;
+}
+.cta-container .cta__content .cta__button-container {
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cta-container > .cta__image {
+    display: none;
+  }
+}
 .divider {
   width: 100%;
   height: 1px;
@@ -317,11 +417,66 @@ h3 {
   }
 }
 
+.card-container {
+  margin-top: 24px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+.card-container .card {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-radius: 6px;
+  display: flex;
+  padding: 12px;
+}
+.card-container .card .card__image {
+  flex: 3;
+}
+.card-container .card .card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  border-radius: 6px;
+}
+.card-container .card .card__content {
+  flex: 7;
+}
+.card-container .card--clicked .card__image {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/010/152/436/original/tick-check-mark-icon-sign-symbol-design-free-png.png);
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container .card {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 768.001px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-container .card {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .card-container .card .card__image {
+    flex: 3;
+    max-width: 128px;
+  }
+  .card-container .card .card__content {
+    flex: 7;
+  }
+}
 body {
   height: 100%;
 }
 
-.topnav {
+.top-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -333,25 +488,25 @@ body {
   background-color: hsl(140, 50%, 100%);
 }
 
-.topnav__aod .topnav__logo {
+.top-nav__aod .top-nav__logo {
   font-size: 24px;
   font-weight: bold;
   color: hsl(140, 50%, 30%);
 }
 
 @media screen and (max-width: 1024px) {
-  .topnav {
+  .top-nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
   }
-  .topnav__container {
+  .top-nav__container {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .topnav__aod {
+  .top-nav__aod {
     width: 100%;
     height: 64px;
     display: flex;
@@ -359,7 +514,7 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  .topnav__menu-container {
+  .top-nav__menu-container {
     height: 0;
     width: 100%;
     display: flex;
@@ -367,10 +522,10 @@ body {
     align-items: flex-start;
     opacity: 0;
     border-top: 0px solid hsl(140, 50%, 50%);
-    transition: all 1400ms ease;
+    transition: all 1000ms ease;
     gap: 8px;
   }
-  .topnav__menu-container .button {
+  .top-nav__menu-container .button {
     min-height: 48px;
     width: 100%;
     display: flex;
@@ -378,7 +533,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
   }
-  .topnav__menu-container.topnav__menu-container--open {
+  .top-nav__menu-container.top-nav__menu-container--open {
     border-top: 2px solid hsl(140, 50%, 50%);
     height: 100vh;
     padding: 16px 0;
@@ -386,10 +541,10 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .topnav {
+  .top-nav {
     overflow: hidden;
   }
-  .topnav__container {
+  .top-nav__container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -397,23 +552,23 @@ body {
     align-items: center;
     height: 64px;
   }
-  .topnav__aod {
+  .top-nav__aod {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .topnav__aod .topnav__toggle-container {
+  .top-nav__aod .top-nav__toggle-container {
     display: none;
   }
-  .topnav__menu-container {
+  .top-nav__menu-container {
     display: flex;
     gap: 4px;
     flex-direction: row;
     align-items: center;
   }
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon {
   position: relative;
   display: flex;
   justify-content: center;
@@ -422,30 +577,30 @@ body {
   height: 24px;
   cursor: pointer;
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon .toggle__bar {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon .toggle__bar {
   position: absolute;
   width: 24px;
   height: 3px;
   background-color: hsl(140, 50%, 35%);
   border-radius: 8px;
-  transition: transform 300ms ease;
+  transition: transform 1000ms ease;
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon .toggle__bar:first-child {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon .toggle__bar:first-child {
   top: 6px;
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon .toggle__bar:last-child {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon .toggle__bar:last-child {
   bottom: 6px;
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon--clicked .toggle__bar:first-child {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon--clicked .toggle__bar:first-child {
   top: calc(50% - 1.5px);
   transform: rotate(45deg);
 }
-.topnav__toggle-container .topnav__toggle-button > .toggle-icon--clicked .toggle__bar:last-child {
+.top-nav__toggle-container .top-nav__toggle-button > .toggle-icon--clicked .toggle__bar:last-child {
   bottom: calc(50% - 1.5px);
   transform: rotate(-45deg);
 }
 
-.bottomnav {
+.bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -457,17 +612,17 @@ body {
   background-color: hsl(140, 50%, 100%);
 }
 @media screen and (min-width: 1024px) {
-  .bottomnav {
+  .bottom-nav {
     display: none;
   }
 }
 @media screen and (max-width: 1024px) {
-  .bottomnav {
+  .bottom-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .bottomnav .buttomnav__container {
+  .bottom-nav .buttom-nav__container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -513,4 +668,10 @@ body {
     flex-direction: column-reverse;
     gap: 16px;
   }
+}
+.qty-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

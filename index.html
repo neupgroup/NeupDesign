@@ -12,25 +12,25 @@
 <body>
     <!-- This is the main HTML that uses the JS for the functioning. -->
     <header>
-        <div class="topnav">
-            <!-- Container adds the padding to the topnav and the topnav__container. -->
-            <div class="container topnav__container">
-                <!-- Class "topnav__aod" has the logo and the toggle that is always visible in the smaller devices. -->
-                <div class="topnav__aod">
-                    <a href="#" class="topnav__logo">
+        <div class="top-nav">
+            <!-- Container adds the padding to the top-nav and the top-nav__container. -->
+            <div class="container top-nav__container">
+                <!-- Class "top-nav__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+                <div class="top-nav__aod">
+                    <a href="#" class="top-nav__logo">
                         <div src="" class="logo__image">NeupGroup</div>
                     </a>
                     <!-- Only for the small width devices. Used with JavaScript support. -->
-                    <div class="topnav__toggle-container">
-                        <a class="button button--plain topnav__toggle-button">
-                            <div class="toggle toggle-icon button__icon topnav__toggle-icon">
+                    <div class="top-nav__toggle-container">
+                        <a class="button button--plain top-nav__toggle-button">
+                            <div class="toggle toggle-icon button__icon top-nav__toggle-icon">
                                 <div class="toggle__bar"></div>
                                 <div class="toggle__bar"></div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <nav class="topnav__menu-container">
+                <nav class="top-nav__menu-container">
                     <!-- Secondary links in the navigation bar. -->
                     <a href="#" class="button button--plain button--plain--active">
                         <div class="button__label">Clock</div>
@@ -54,9 +54,7 @@
         </div>
     </header>
 
-
     <main>
-
         <section class="section section-hero">
             <div class="container hero-container">
                 <div class="hero__content">
@@ -72,15 +70,14 @@
                 </div>
             </div>
         </section>
-        `
 
-        <div class="contained-divider"></div>
 
     </main>
 
+    <footer class="footer"></footer>
 
-    <div class="bottomnav">
-        <div class="container buttomnav__container">
+    <div class="bottom-nav">
+        <div class="container buttom-nav__container">
             <!-- The buttons must have icons. -->
             <a href="#" class="button button--solid">
                 <div class="button__label">Stopwatch</div>
@@ -90,8 +87,7 @@
             </a>
         </div>
     </div>
-
-
+    
     <script src="./javascript/navigation.js"></script>
 
 </body>

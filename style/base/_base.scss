@@ -1,3 +1,8 @@
+// Typography to be used in the Design System
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
 // Reset the theme for the Design System
 * {
 	margin: 0;
@@ -90,10 +95,6 @@ $color_s-info--hue: 0;
 $color_s-info--saturation: 0%;
 $color_s-info-lightness: 50%;
 
-
-
-// Typography to be used in the Design System
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
 // Basic things ike Selection, Target

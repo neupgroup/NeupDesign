@@ -1,0 +1,40 @@
+// TODO: Requires changing the color of the text and the adding links to their added page.
+// TODO: Change the color of the text as per the Design System.
+// TODO: Could be okay for now, does not requires the site to be designed to the perfect one page.
+
+.member-container {
+	margin-top: 24px;
+	display: grid;
+	grid-auto-flow: row;
+	gap: 16px;
+
+	.member>.member__image>img {
+		border-radius: 8px;
+	}
+
+	.member.member__content> .member__name {
+		font-family: Poppins;
+		font-weight: bold;
+	}
+
+	@media screen and (min-width: 0) and (max-width: 320px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media screen and (min-width: 320.001px) and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media screen and (min-width: 768.001) and (max-width:1024px){
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media screen and (min-width: 1024.001) and (max-width:1440px){
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	@media screen and (min-width: 1440px){
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+}
