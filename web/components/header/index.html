@@ -1,23 +1,23 @@
 <!-- This is the main HTML that uses the JS for the functioning. -->
-<header class="top-nav">
-    <!-- Container adds the padding to the top-nav and the top-nav__container. -->
-    <div class="container top-nav__container">
-        <!-- Class "top-nav__aod" has the logo and the toggle that is always visible in the smaller devices. -->
-        <div class="top-nav__aod">
-            <a href="#" class="top-nav__logo">
+<header class="header">
+    <!-- Container adds the padding to the header and the header__container. -->
+    <div class="container header__container">
+        <!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+        <div class="header__aod">
+            <a href="#" class="header__logo">
                 <div src="" class="logo__image">NeupGroup</div>
             </a>
             <!-- Only for the small width devices. Used with JavaScript support. -->
-            <div class="top-nav__toggle-container">
-                <a class="button button--plain top-nav__toggle-button">
-                    <div class="toggle toggle-icon button__icon top-nav__toggle-icon">
+            <div class="header__toggle-container">
+                <a class="button button--plain header__toggle-button">
+                    <div class="toggle toggle-icon button__icon header__toggle-icon">
                         <div class="toggle__bar"></div>
                         <div class="toggle__bar"></div>
                     </div>
                 </a>
             </div>
         </div>
-        <nav class="top-nav__menu-container">
+        <nav class="header__nav">
             <!-- Secondary links in the navigation bar. -->
             <a href="#" class="button button--plain button--plain--active">
                 <div class="button__label">Clock</div>
@@ -48,8 +48,8 @@
 
 
 <!-- This bottom navigation bar does not requires any kind of JS to run. -->
-<div class="bottom-nav">
-    <div class="container buttom-nav__container">
+<div class="footer">
+    <div class="container footer__container">
         <!-- The buttons must have icons. -->
         <a href="#" class="button button--solid">
             <div class="button__label">Stopwatch</div>
