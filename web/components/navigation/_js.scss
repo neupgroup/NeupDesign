@@ -1,5 +1,5 @@
-// Importing of required SCSS
-@use "../base/_index" as base;
+// Importing the variables and design foundation to the code.
+@use "./../../base/_index" as base;
 
 body {
   height: 100%;

@@ -4,8 +4,8 @@
 //     > .
 
 
-// Importing of dependencies SCSS to be used.
-@use "../base/_index" as base;
+// Importing the variables and design foundation to the code.
+@use "./../../base/_index" as base;
 
 
 // The code for the main element.
