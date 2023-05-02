@@ -1,0 +1,108 @@
+// Importing the variables and design foundation to the code.
+@use "./../../base/_index" as base;
+
+
+// Variable construction for the footer.
+$footer-nav-title-color: base.$color_m-dynamic-5;
+$footer-nav-title-background-color: base.$color_n-transparent;
+
+$footer-nav-item-color: base.$color_m-dynamic-20;
+$footer-nav-item-color--hover: base.$color_m-dynamic-10;
+$footer-nav-item-color--active: base.$color_m-dynamic-0;
+$footer-nav-item-background-color: base.$color_n-transparent;
+$footer-nav-item-background-color--hover: base.$color_m-dynamic-90;
+$footer-nav-item-background-color--active: base.$color_m-dynamic-80;
+
+$footer-appbar-shadow: 0 -2px 4px base.$color_m-dynamic-85;
+$footer-appbar-background-color: base.$color_m-dynamic-100;
+$footer-universal-transition: 300ms ease all;
+
+
+// The main SCSS for the footer.
+
+.footer {
+	width: 100%;
+	background-color: whitesmoke;
+	padding: 64px 0;
+
+	.footer__appbar {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		min-height: 96px;
+		box-shadow: $footer-appbar-shadow;
+		background-color: $footer-appbar-background-color;
+
+		@media screen and (min-width: 1024px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 1024px) {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	.footer__nav {
+		display: flex;
+		flex-direction: row;
+		max-width: 1440px;
+		margin: auto;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 16px;
+		flex-wrap: wrap;
+
+		.nav__column {
+			display: flex;
+			flex-direction: column;
+
+			@media screen and (max-width: 1024px){
+			flex-basis: 100%;
+			}
+		}
+	}
+
+	.footer__nav>.nav__column>.nav__title {
+		padding: 0 16px;
+		font-size: 20px;
+		color: $footer-nav-title-color;
+		background-color: $footer-nav-title-background-color;
+		font-weight: bold;
+	}
+
+	.footer__nav>.nav__column>.nav__item {
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 16px;
+		height: 44px;
+		max-height: 44px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		border-radius: base.$radius-less-1;
+		color: $footer-nav-item-color;
+		background-color: $footer-nav-item-background-color;
+		transition: $footer-universal-transition;
+
+		&:nth-of-type(1) {
+			margin-top: 12px;
+		}
+
+		&:hover {
+			color: $footer-nav-item-color--hover;
+			background-color: $footer-nav-item-background-color--hover;
+		}
+
+		&:active,
+		&--active {
+			color: $footer-nav-item-color--active;
+			background-color: $footer-nav-item-background-color--active;
+		}
+
+
+	}
+}
