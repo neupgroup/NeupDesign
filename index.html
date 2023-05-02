@@ -1,5 +1,3 @@
-<!-- TODO: Make the footer navigation responsive to devices. -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,22 +5,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="./web/main.css">
+	<title>NeupDesign</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neupgroup/neupdesign/web/main.css" type="text/css">
 </head>
 
 <body>
 
-	<!-- This is the main HTML that uses the JS for the functioning. -->
 	<header class="header">
-		<!-- Container adds the padding to the header and the header__container. -->
 		<div class="container header__container">
-			<!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
 			<div class="header__aod">
 				<a href="#" class="header__logo">
-					<div src="" class="logo__image">NeupGroup</div>
+					<div src="" class="logo__image">NeupDesign</div>
 				</a>
-				<!-- Only for the small width devices. Used with JavaScript support. -->
 				<div class="header__toggle-container">
 					<a class="button button--plain header__toggle-button">
 						<div class="toggle toggle-icon button__icon header__toggle-icon">
@@ -33,54 +28,56 @@
 				</div>
 			</div>
 			<nav class="header__nav">
-				<!-- Secondary links in the navigation bar. -->
 				<a href="#" class="button button--plain button--plain--active">
-					<div class="button__label">Clock</div>
+					<div class="button__label">Principles</div>
 				</a>
 				<a href="#" class="button button--plain">
-					<div class="button__label">Stopwatch</div>
+					<div class="button__label">Guidelines</div>
 				</a>
 				<a href="#" class="button button--plain">
-					<div class="button__label">Timer</div>
+					<div class="button__label">Library</div>
 				</a>
 				<a href="#" class="button button--plain">
-					<div class="button__label">Alarm</div>
+					<div class="button__label">Resources</div>
 				</a>
-				<!-- Primary links in the navigation bar. -->
 				<a href="#" class="button button--solid">
-					<div class="button__label">Hello, Kishor!</div>
+					<div class="button__label">Get Started!</div>
 				</a>
 			</nav>
 		</div>
 	</header>
 
-
-	<!-- This script is required for the toggling function of the top-nav. -->
-	<script src="./web/components/header/_main.js"></script>
-
-
-	<section class="section section-hero">
-		<div class="container hero-container">
-			<div class="hero__content">
-				<h1>Hero Title. Title of the Page.</h1>
-				<p>Hero Description. Simply contains the generalized description about what this thing is.</p>
-				<div class="button-container">
-					<a href="#" class="button button--solid">Action Button</a>
-					<a href="#" class="button button--outline">Plain Button</a>
+	<main>
+		<section class="section section-hero">
+			<div class="container hero-container">
+				<div class="hero__content">
+					<h1>Neup Design System</h1>
+					<p>Design system made with the philosophy of minimalism and essentialism. Easy to use and profoundly
+						get's along with your style. A basic design system for people who love simplicity.</p>
+					<div class="button-container">
+						<a href="#" class="button button--outline">
+							<div class="button__label">Learn More</div>
+						</a>
+						<a href="#" class="button button--solid">
+							<div class="button__label">Get Started</div>
+						</a>
+					</div>
+				</div>
+				<div class="hero__image">
+					<img src="https://shorturl.at/qtvW2" alt="">
 				</div>
 			</div>
-			<div class="hero__image">
-				<img src="https://wallpapercave.com/wp/wp7247098.jpg" alt="">
-			</div>
-		</div>
-	</section>
+		</section>
+
+
+
+	</main>
 
 
 	<footer class="footer footer-section">
 		<div class="container footer-container">
 			<!-- Footer with navigating items but not AOD. -->
 			<div class="footer-nav">
-
 				<div class="footer-nav__social">
 					<h4>Follow us:</h4>
 					<a class="button button--plain" href="https://facebook.com/NeupGroup">
@@ -99,9 +96,7 @@
 						<img src="./logo/linkedin.svg" alt="LinkedIn" class="button__icon">
 					</a>
 				</div>
-
 				<div class="divider"></div>
-
 				<div class="footer-nav__product">
 					<div class="logo">NeupDesign</div>
 					<div class="product-links">
@@ -112,9 +107,7 @@
 						<a class="button button--plain" href="https://linkedin.com/NeupGroup">NeupGroup</a>
 					</div>
 				</div>
-
 				<div class="divider"></div>
-
 				<div class="footer-nav__company">
 					<a class="button button--plain" href="https://facebook.com/NeupGroup">Help</a>
 					<a class="button button--plain" href="https://youtube.com/NeupGroup">Privacy</a>
@@ -122,25 +115,12 @@
 					<a class="button button--plain" href="https://twitter.com/NeupGroup">Products</a>
 					<a class="button button--plain" href="https://linkedin.com/NeupGroup">Language</a>
 				</div>
-
 			</div>
 
-
-
 		</div>
-		<!-- Footer with no navigating items but AOD.
-		<div class="footer__appbar">
-			<a href="#" class="button button--solid">
-				<div class="button__label">Stopwatch</div>
-			</a>
-			<a href="#" class="button button--outline">
-				<div class="button__label">Stopwatch</div>
-			</a>
-		</div> -->
-
 	</footer>
 
-
+	<script src="https://cdn.jsdelivr.net/gh/neupgroup/NeupDesign/web/components/header/_main.js"></script>
 
 </body>
 
