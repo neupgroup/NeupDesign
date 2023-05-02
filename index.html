@@ -13,6 +13,51 @@
 
 <body>
 
+	<!-- This is the main HTML that uses the JS for the functioning. -->
+	<header class="header">
+		<!-- Container adds the padding to the header and the header__container. -->
+		<div class="container header__container">
+			<!-- Class "header__aod" has the logo and the toggle that is always visible in the smaller devices. -->
+			<div class="header__aod">
+				<a href="#" class="header__logo">
+					<div src="" class="logo__image">NeupGroup</div>
+				</a>
+				<!-- Only for the small width devices. Used with JavaScript support. -->
+				<div class="header__toggle-container">
+					<a class="button button--plain header__toggle-button">
+						<div class="toggle toggle-icon button__icon header__toggle-icon">
+							<div class="toggle__bar"></div>
+							<div class="toggle__bar"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<nav class="header__nav">
+				<!-- Secondary links in the navigation bar. -->
+				<a href="#" class="button button--plain button--plain--active">
+					<div class="button__label">Clock</div>
+				</a>
+				<a href="#" class="button button--plain">
+					<div class="button__label">Stopwatch</div>
+				</a>
+				<a href="#" class="button button--plain">
+					<div class="button__label">Timer</div>
+				</a>
+				<a href="#" class="button button--plain">
+					<div class="button__label">Alarm</div>
+				</a>
+				<!-- Primary links in the navigation bar. -->
+				<a href="#" class="button button--solid">
+					<div class="button__label">Hello, Kishor!</div>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+
+	<!-- This script is required for the toggling function of the top-nav. -->
+	<script src="../javascript/navigation.js"></script>
+
 
 	<section class="section section-hero">
 		<div class="container hero-container">
@@ -31,7 +76,58 @@
 	</section>
 
 
-	<footer class="footer">
+	<footer class="footer footer-section">
+		<div class="container footer-container">
+			<!-- Footer with navigating items but not AOD. -->
+			<div class="footer-nav">
+
+				<div class="footer-nav__social">
+					<h4>Follow us:</h4>
+					<a class="button button--plain" href="https://facebook.com/NeupGroup">
+						<img src="./logo/facebook.svg" alt="Facebook" class="button__icon">
+					</a>
+					<a class="button button--plain" href="https://youtube.com/NeupGroup">
+						<img src="./logo/youtube.svg" alt="Facebook" class="button__icon">
+					</a>
+					<a class="button button--plain" href="https://instagram.com/NeupGroup">
+						<img src="./logo/instagram.svg" alt="Instagram" class="button__icon">
+					</a>
+					<a class="button button--plain" href="https://twitter.com/NeupGroup">
+						<img src="./logo/twitter.svg" alt="Twitter" class="button__icon">
+					</a>
+					<a class="button button--plain" href="https://linkedin.com/NeupGroup">
+						<img src="./logo/linkedin.svg" alt="LinkedIn" class="button__icon">
+					</a>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="footer-nav__product">
+					<div class="logo">NeupDesign</div>
+					<div class="product-links">
+						<a class="button button--plain" href="https://facebook.com/NeupGroup">Gift Cards</a>
+						<a class="button button--plain" href="https://youtube.com/NeupGroup">Premium</a>
+						<a class="button button--plain" href="https://instagram.com/NeupGroup">Teams</a>
+						<a class="button button--plain" href="https://twitter.com/NeupGroup">Resources</a>
+						<a class="button button--plain" href="https://linkedin.com/NeupGroup">NeupGroup</a>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="footer-nav__company">
+					<a class="button button--plain" href="https://facebook.com/NeupGroup">Help</a>
+						<a class="button button--plain" href="https://youtube.com/NeupGroup">Privacy</a>
+						<a class="button button--plain" href="https://instagram.com/NeupGroup">Terms</a>
+						<a class="button button--plain" href="https://twitter.com/NeupGroup">Products</a>
+						<a class="button button--plain" href="https://linkedin.com/NeupGroup">Language</a>
+				</div>
+
+			</div>
+
+
+
+		</div>
 		<!-- Footer with no navigating items but AOD.
 		<div class="footer__appbar">
 			<a href="#" class="button button--solid">
@@ -42,70 +138,6 @@
 			</a>
 		</div> -->
 
-
-		<!-- Footer with navigating items but not AOD. -->
-		<div class="footer__nav">
-			<div class="nav__column">
-				<div class="nav__title">About Neup</div>
-				<a href="https://design.neupgroup.com" class="nav__item">
-					<div class="item__label">About us</div>
-				</a>
-				<a href="https://card.neupgroup.com" class="nav__item">
-					<div class="itme__label">Newsroom</div>
-				</a>
-				<a href="https://wallet.neupgroup.com" class="nav__item">
-					<div class="item__lable">Investors</div>
-				</a>
-				<a href="https://tourio.neupgroup.com" class="nav__item">
-					<div class="item__label">Blogs</div>
-				</a>
-				<a href="https://tourio.neupgroup.com" class="nav__item">
-					<div class="item__label">Careers</div>
-				</a>
-			</div>
-			<div class="nav__column">
-				<div class="nav__title">Responsibilities</div>
-				<a href="https://tourio.neupgroup.com" class="nav__item">
-					<div class="item__label">Wellbeing</div>
-				</a>
-				<a href="https://tourio.neupgroup.com" class="nav__item">
-					<div class="item__label">Accessibility</div>
-				</a>
-				<a href="https://wallet.neupgroup.com" class="nav__item">
-					<div class="item__lable">Safety Center</div>
-				</a>
-				<a href="https://design.neupgroup.com" class="nav__item">
-					<div class="item__label">Neup Foundation</div>
-				</a>
-				<a href="https://card.neupgroup.com" class="nav__item">
-					<div class="itme__label">Sustainability</div>
-				</a>
-			</div>
-			<div class="nav__column">
-				<div class="nav__title">Products</div>
-				<a href="https://design.neupgroup.com" class="nav__item">
-					<div class="item__label">Neup Wallet</div>
-				</a>
-				<a href="https://card.neupgroup.com" class="nav__item">
-					<div class="itme__label">Neup Tourio</div>
-				</a>
-				<a href="https://wallet.neupgroup.com" class="nav__item">
-					<div class="item__lable">Neup Ads</div>
-				</a>
-				<a href="https://tourio.neupgroup.com" class="nav__item">
-					<div class="item__label">View all products</div>
-				</a>
-			</div>
-			<div class="nav__column">
-				<div class="nav__title">More</div>
-				<a href="https://design.neupgroup.com" class="nav__item">
-					<div class="item__label">Transparency Center</div>
-				</a>
-				<a href="https://card.neupgroup.com" class="nav__item">
-					<div class="itme__label">Privacy @ Neup</div>
-				</a>
-			</div>
-		</div>
 	</footer>
 
 

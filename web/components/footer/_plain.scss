@@ -18,13 +18,70 @@ $footer-appbar-background-color: base.$color_m-dynamic-100;
 $footer-universal-transition: 300ms ease all;
 
 
-// The main SCSS for the footer.
-
 .footer {
-	width: 100%;
-	background-color: whitesmoke; 
+	background-color: #fafafa;
 	padding: 64px 0;
- 
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+
+		.footer-nav__social {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 24px 0;
+
+			.button__icon {
+				border-radius: 0;
+			}
+
+			h4 {
+				margin-right: 12px;
+				font-size: 18px;
+			}
+		}
+
+		.footer-nav__product {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 16px;
+			padding: 16px 0;
+			flex-wrap: wrap;
+
+			@media screen and (max-width: 1024px) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+
+			.logo {
+				font-size: 24px;
+				margin-left: 12px;
+				font-weight: bold;
+				color: base.$color_m-dynamic-30;
+			}
+
+			.product-links {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+		}
+
+		.footer-nav__company {
+			padding-top: 16px;
+			display: flex;
+			gap: 8px;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+
 	.footer__appbar {
 		position: fixed;
 		bottom: 0;
@@ -43,66 +100,5 @@ $footer-universal-transition: 300ms ease all;
 			flex-direction: column;
 			justify-content: center;
 		}
-	}
-
-	.footer__nav {
-		display: flex;
-		flex-direction: row;
-		max-width: 1440px;
-		margin: auto;
-		justify-content: space-between;
-		gap: 16px;
-		padding: 16px;
-		flex-wrap: wrap;
-
-		.nav__column {
-			display: flex;
-			flex-direction: column;
-
-			@media screen and (max-width: 1024px){
-			flex-basis: 100%;
-			}
-		}
-	}
-
-	.footer__nav>.nav__column>.nav__title {
-		padding: 0 16px;
-		font-size: 20px;
-		color: $footer-nav-title-color;
-		background-color: $footer-nav-title-background-color;
-		font-weight: bold;
-	}
-
-	.footer__nav>.nav__column>.nav__item {
-		display: inline-flex;
-		align-items: center;
-		justify-content: flex-start;
-		padding: 0 16px;
-		height: 44px;
-		max-height: 44px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		border-radius: base.$radius-less-1;
-		color: $footer-nav-item-color;
-		background-color: $footer-nav-item-background-color;
-		transition: $footer-universal-transition;
-
-		&:nth-of-type(1) {
-			margin-top: 12px;
-		}
-
-		&:hover {
-			color: $footer-nav-item-color--hover;
-			background-color: $footer-nav-item-background-color--hover;
-		}
-
-		&:active,
-		&--active {
-			color: $footer-nav-item-color--active;
-			background-color: $footer-nav-item-background-color--active;
-		}
-
-
 	}
 }

@@ -1,18 +1,17 @@
 // Importing the variables and design foundation to the code.
 @use "./../../base/_index" as base;
 
+
 // Variables to be used only for the Solid Buttons
 $button-solid-color: base.$color_m-dynamic-99;
 $button-solid-background-color: base.$color_m-dynamic-50;
 $button-solid-background-color--hover: base.$color_m-dynamic-40;
 $button-solid-background-color--active: base.$color_m-dynamic-30;
-
 // Variables to be used only for the Tint Buttons
 $button-tint-color: base.$color_m-dynamic-1;
 $button-tint-background-color: base.$color_m-dynamic-80;
 $button-tint-background-color--hover: base.$color_m-dynamic-70;
 $button-tint-background-color--active: base.$color_m-dynamic-60;
-
 // Variable to be used only for the Outline Buttons
 $button-outline-color: base.$color_m-dynamic-1;
 $button-outline-background-color: base.$color_n-transparent;
@@ -21,31 +20,43 @@ $button-outline-background-color--active: base.$color_m-dynamic-90;
 $button-outline-border-color: base.$color_m-dynamic-40;
 $button-outline-border-color--hover: base.$color_m-dynamic-30;
 $button-outline-border-color--active: base.$color_m-dynamic-20;
-
 // Variables to be used onlt for the Plain Buttons
 $button-plain-color: base.$color_m-dynamic-1;
 $button-plain-background-color: base.$color_n-transparent;
 $button-plain-background-color--hover: base.$color_m-dynamic-95;
 $button-plain-background-color--active: base.$color_m-dynamic-90;
-
-
 // Variable for transtition on All Buttons
 $button-transtition: all 400ms ease;
 
+
 // The main code for the buttons starts here.
 .button {
-    height: 48px;
+    height: 44px;
     max-height: 44px;
-    min-width: 48px;
+    min-width: 44px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border: none;
     border-radius: 24px; //rounded 24, edged 0, pill 4
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
     gap: 8px;
+
+    .button__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 24px;
+        max-width: 24px;
+    }
+
+    .button__label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     &--solid {
         border: none;
@@ -84,9 +95,7 @@ $button-transtition: all 400ms ease;
                 color: inherit;
                 background-color: inherit;
             }
-
         }
-
     }
 
     &--tint {
@@ -117,7 +126,6 @@ $button-transtition: all 400ms ease;
             opacity: 0.3;
             cursor: not-allowed;
         }
-
     }
 
     &--outline {
@@ -148,7 +156,6 @@ $button-transtition: all 400ms ease;
             opacity: 0.3;
             cursor: not-allowed;
         }
-
     }
 
     &--plain {
@@ -179,7 +186,5 @@ $button-transtition: all 400ms ease;
             opacity: 0.3;
             cursor: not-allowed;
         }
-
     }
-
 }
