@@ -1,0 +1,44 @@
+.menu {
+    // Sponsored Items Menu Design
+
+    .menu-category {
+
+        .menu-category__title {
+            color: black;
+        }
+
+        .menu__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+
+            @media screen and (max-width:767.999px) {
+                grid-template-columns: 1fr;                
+            }
+
+        }
+    }
+}
+
+.menu__item {
+    border: 1px solid black;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+
+    .item__image {
+        img {
+            object-fit: cover;
+            height: 128px;
+            width: 128px;
+        }
+    }
+    .item__details{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
