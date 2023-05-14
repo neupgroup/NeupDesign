@@ -65,6 +65,32 @@ main {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .main {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main {
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .main {
+    margin-top: 64px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main {
+    margin-top: 128px;
+  }
+}
+
 .button--profile {
   background-color: hsl(140, 50%, 100%);
   color: #000;
@@ -594,60 +620,33 @@ body {
 }
 
 .card-container {
-  margin-top: 24px;
   display: grid;
-  grid-auto-flow: row;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
 }
 .card-container .card {
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  border-radius: 6px;
   display: flex;
-  padding: 12px;
-}
-.card-container .card .card__image {
-  flex: 3;
+  border-radius: 8px;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 16px;
 }
 .card-container .card .card__image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 4px;
-  border-radius: 6px;
+  max-height: 256px;
+  height: 256px;
 }
-.card-container .card .card__content {
-  flex: 7;
+.card-container .card .card__title {
+  font-weight: 500;
 }
-.card-container .card--clicked .card__image {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/010/152/436/original/tick-check-mark-icon-sign-symbol-design-free-png.png);
+.card-container .card .card__description {
+  font-weight: 300;
+}
+.card-container .card .card__button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
-@media screen and (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-  .card-container .card {
-    flex-direction: row;
-    gap: 12px;
-  }
-}
-@media screen and (min-width: 768.001px) {
-  .card-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .card-container .card {
-    flex-direction: row;
-    gap: 12px;
-  }
-  .card-container .card .card__image {
-    flex: 3;
-    max-width: 128px;
-  }
-  .card-container .card .card__content {
-    flex: 7;
-  }
-}
 .clients-container {
   margin-top: 24px;
   display: grid;
@@ -834,38 +833,6 @@ body {
     border: none;
   }
 }
-.menu .menu-category .menu-category__title {
-  color: black;
-}
-.menu .menu-category .menu__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-@media screen and (max-width: 767.999px) {
-  .menu .menu-category .menu__items {
-    grid-template-columns: 1fr;
-  }
-}
-
-.menu__item {
-  border: 1px solid black;
-  gap: 16px;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-}
-.menu__item .item__image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 128px;
-  width: 128px;
-}
-.menu__item .item__details {
-  display: flex;
-  flex-direction: column;
-}
-
 .article-container .article__meta {
   max-width: 704px;
   margin: 0 auto;
@@ -898,31 +865,4 @@ body {
   background-color: green;
   padding: 4px;
   border-radius: 8px;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.menu-item input[type=text] {
-  flex: 70;
-}
-.menu-item input[type=number] {
-  flex: 30;
-}
-
-.hotel-code {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.hotel-code input[type=text] {
-  flex: 70;
 }/*# sourceMappingURL=main.css.map */

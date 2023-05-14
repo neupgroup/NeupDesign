@@ -2,35 +2,3 @@
 @use "./components/_index" as components;
 @use "./sections/_index" as section;
 @use "./pages/_index" as pages;
-
-.menu-item{
-	display: flex;
-	flex-direction: row;
-	margin: auto;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-
-	input[type='text']{
-		flex: 70;
-	}
-
-	input[type='number']{
-		flex: 30;
-	}
-
-}
-
-.hotel-code{
-	display: flex;
-	flex-direction: row;
-	margin: auto;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-
-	input[type='text']{
-		flex: 70;
-	}
-
-}
