@@ -1,7 +1,11 @@
-# NeupDesign-Site
-This is the website of the NeupGroup Design System. Use this only to make changes to the Neup Design System website.
+# Neup Design System
+Neup Design System is a comprehensive design system that works on all the types of devices. The core principles of this design system are guided by minimalism and essentialism.
 
-# The link to the main file is:
-https://cdn.jsdelivr.net/gh/neupgroup/neupdesign/system/web/main.css
+## Components and Base Design System:
+- [Neup Design System for Web](https://github.com/neupgroup/neupdesign/web)
 
-https://shorturl.at/sHI25
+## External Links:
+- [Website](https://design.neupgroup.com)
+- [Principles](https://design.neupgroup.com/principles)
+- [Guidelines](https://design.neupgroup.com/guidelines)
+- [Library](https://design.neupgroup.com/library)
