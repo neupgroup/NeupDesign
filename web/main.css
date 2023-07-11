@@ -126,7 +126,6 @@ main {
   padding-left: 12px;
   padding-right: 12px;
   gap: 8px;
-  margin-top: 12px;
 }
 .button .button__icon {
   display: flex;
